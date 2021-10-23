@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import Base from "../src/Common/Base";
 
-import { Button } from './Button';
-import './header.css';
+import { Button } from "./Button";
+import "./header.css";
 
 interface HeaderProps {
   user?: {};
@@ -10,7 +11,9 @@ interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({
+  user, onLogin, onLogout, onCreateAccount,
+}: HeaderProps) => (
   <header>
     <div className="wrapper">
       <div>
@@ -43,5 +46,6 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
         )}
       </div>
     </div>
+    <Base.p color="tangerine-a50" py="10">Hohoho ini dibikin dari common component</Base.p>
   </header>
 );
