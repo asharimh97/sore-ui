@@ -1,4 +1,4 @@
-import { x } from "@xstyled/styled-components";
+import { x } from "../config/xstyled.config";
 
 const Base = x;
 
