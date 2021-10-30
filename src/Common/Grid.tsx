@@ -1,3 +1,4 @@
+import React from "react";
 import { createCss, compose, ITheme, Theme } from "@xstyled/styled-components";
 import { SystemStyleProps, systemProps } from "../config/xstyled.config";
 import {
@@ -16,7 +17,7 @@ const gridProps = compose<GridProps>(systemProps, customGridProps);
 
 const { x } = createCss(gridProps);
 
-const Grid = (props: GridProps) => {
+const Grid: React.FC<GridProps> = (props) => {
   return <x.div {...props} display="grid" />;
 };
 
