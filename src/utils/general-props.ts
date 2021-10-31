@@ -1,4 +1,5 @@
 import * as CSS from "csstype";
+import React from "react";
 import {
   style,
   SystemProp,
@@ -22,9 +23,14 @@ const width = style<WidthProps>({
 const height = style<HeightProps>({
   prop: "height",
 });
+interface AsProps {
+  as?: string | React.ComponentType<any>;
+  forwardedAs?: string | React.ComponentType<any>;
+}
 
 export interface GeneralProps<T extends ITheme = Theme>
   extends HeightProps<T>,
-    WidthProps<T> {}
+    WidthProps<T>,
+    AsProps {}
 
 export const generalProps = compose<GeneralProps>(height, width);
