@@ -1,3 +1,4 @@
+import React from "react";
 import * as CSS from "csstype";
 import {
   style,
@@ -16,6 +17,22 @@ import {
  * onClose -> related to closable
  */
 
-export interface TagProps {}
+interface ColorProps {
+  color?: string;
+}
 
-export const tagProps = {};
+const tagColor = style<ColorProps>({
+  prop: "color",
+  css: () => ({}),
+});
+
+interface IconProps {
+  icon?: React.ReactNode;
+}
+
+// eslint-disable-next-line no-unused-vars
+export interface TagProps<T extends ITheme = Theme>
+  extends ColorProps,
+    IconProps {}
+
+export const tagProps = compose<TagProps>(tagColor);
