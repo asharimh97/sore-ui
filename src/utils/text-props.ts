@@ -89,7 +89,7 @@ const uppercase = style({
   prop: "upppercase",
   css: () => ({
     "&": {
-      textTransform: "upppercase",
+      textTransform: "uppercase",
     },
   }),
 });
