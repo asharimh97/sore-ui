@@ -1,6 +1,6 @@
 import React from "react";
 import { ITheme, Theme } from "@xstyled/styled-components";
-import { x, styled, SystemStyleProps } from "../config/xstyled.config";
+import { x, styled, SystemStyleProps, css } from "../config/xstyled.config";
 import Text from "./Text";
 
 const { div } = x;
@@ -12,11 +12,32 @@ const { div } = x;
  * - align/orientation
  */
 
+interface DividerProps<T extends ITheme = Theme> extends SystemStyleProps<T> {
+  orientation?: "left" | "center" | "right";
+}
+
+const orientStyle = {
+  left: {
+    before: "20%",
+    after: "80%",
+  },
+  right: {
+    before: "80%",
+    after: "20%",
+  },
+  center: {
+    before: "50%",
+    after: "50%",
+  },
+};
+
+type orientStyleType = keyof typeof orientStyle;
+
 const SimpleDivider = styled(x.div)`
   border-top: solid 1px;
   border-color: cool-gray-300;
   height: 1px;
-  margin: 16px 0;
+  margin: 20px 0;
   width: 100%;
   min-width: 100%;
 `;
@@ -27,7 +48,7 @@ const TextWrapper = styled(Text)`
   padding: 0 1em;
 `;
 
-const DividerWrapper = styled(x.div)`
+const DividerWrapper = styled(x.div)<DividerProps>`
   align-items: center;
   clear: both;
   display: flex;
@@ -47,6 +68,12 @@ const DividerWrapper = styled(x.div)`
     transform: translateY(-50%);
     position: relative;
     width: 50%;
+
+    ${({ orientation }) =>
+      orientation &&
+      css({
+        width: orientStyle[orientation].before,
+      })}
   }
 
   &:after {
@@ -59,10 +86,14 @@ const DividerWrapper = styled(x.div)`
     transform: translateY(-50%);
     position: relative;
     width: 50%;
+
+    ${({ orientation }) =>
+      orientation &&
+      css({
+        width: orientStyle[orientation].after,
+      })}
   }
 `;
-
-interface DividerProps<T extends ITheme = Theme> extends SystemStyleProps<T> {}
 
 const Divider: React.FC<DividerProps> = ({ children, ...props }) => {
   if (!children) {
@@ -70,7 +101,7 @@ const Divider: React.FC<DividerProps> = ({ children, ...props }) => {
   }
 
   return (
-    <DividerWrapper>
+    <DividerWrapper {...props}>
       <TextWrapper>{children}</TextWrapper>
     </DividerWrapper>
   );
