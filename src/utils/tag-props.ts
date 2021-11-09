@@ -30,9 +30,14 @@ interface IconProps {
   icon?: React.ReactNode;
 }
 
+interface SizeProps {
+  size?: "small" | "medium" | "large";
+}
+
 // eslint-disable-next-line no-unused-vars
 export interface TagProps<T extends ITheme = Theme>
   extends ColorProps,
-    IconProps {}
+    IconProps,
+    SizeProps {}
 
 export const tagProps = compose<TagProps>(tagColor);

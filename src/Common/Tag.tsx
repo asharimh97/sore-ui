@@ -9,7 +9,7 @@ import { tagColors } from "../lib/constants";
 import { generateFontColor } from "../lib/utils/color";
 
 interface TagProps<T extends ITheme = Theme>
-  extends Omit<SystemStyleProps<T>, "color">,
+  extends Omit<SystemStyleProps<T>, "color" | "size">,
     CustomTagProps {}
 
 const tagProps = compose<TagProps>(systemProps, customTagProps);
@@ -38,6 +38,20 @@ const TagWrapper = styled.span<TagProps>`
       backgroundColor: tagColors[color]?.bg || color,
       borderColor: tagColors[color]?.fg || color,
       color: tagColors[color]?.fg || generateFontColor(color),
+    })}
+
+  ${({ size }) =>
+    size === "small" &&
+    css({
+      fontSize: "11px",
+      padding: "2px 4px",
+    })}
+
+  ${({ size }) =>
+    size === "large" &&
+    css({
+      fontSize: "15px",
+      padding: "4px 8px",
     })}
 `;
 
