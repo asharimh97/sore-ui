@@ -16,7 +16,7 @@ const tagProps = compose<TagProps>(systemProps, customTagProps);
 
 const { x, styled, css } = createCss(tagProps);
 
-const TagWrapper = styled.span<TagProps>`
+const TagWrapper = styled(x.span)<TagProps>`
   background-color: cool-gray-50;
   border: solid 1px;
   border-color: cool-gray-700;
@@ -55,8 +55,26 @@ const TagWrapper = styled.span<TagProps>`
     })}
 `;
 
-const Tag: React.FC<TagProps> = (props) => {
-  return <TagWrapper {...props} />;
+const IconWrapper = styled(x.span)`
+  margin-right: 4px;
+  margin-bottom: 0px;
+`;
+
+const Tag: React.FC<TagProps> = ({ icon, children, ...props }) => {
+  const renderIcon = () => {
+    if (icon) {
+      return <IconWrapper>{icon}</IconWrapper>;
+    }
+
+    return null;
+  };
+
+  return (
+    <TagWrapper {...props}>
+      {renderIcon()}
+      {children}
+    </TagWrapper>
+  );
 };
 
 export default Tag;
