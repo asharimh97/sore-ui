@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { defaultTheme } from "@xstyled/styled-components";
 import color from "./color";
 
@@ -12,20 +13,23 @@ const fontSizes = {
   h4: "28px",
   h3: "32px",
   h2: "40px",
-  h1: "48px"
-}
+  h1: "48px",
+};
 
 const fonts = {
   ...defaultTheme.fonts,
-  sans: "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
-  display: "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
-  body: "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
-}
+  sans:
+    "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
+  display:
+    "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
+  body:
+    "Google Sans, system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'",
+};
 
 const theme = {
   ...defaultTheme,
   colors: {
-    ...color
+    ...color,
   },
   fontSizes,
 };
