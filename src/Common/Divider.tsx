@@ -5,13 +5,6 @@ import Text from "./Text";
 
 const { div } = x;
 
-/**
- * @todo
- * It should accept props:
- * - children
- * - align/orientation
- */
-
 interface DividerProps<T extends ITheme = Theme> extends SystemStyleProps<T> {
   orientation?: "left" | "center" | "right";
 }
