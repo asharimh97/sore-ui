@@ -1,6 +1,7 @@
 import {
   defaultTheme,
   generateHexAlphaVariants,
+  aliasColor,
 } from "@xstyled/styled-components";
 
 const color = {
@@ -13,6 +14,8 @@ const color = {
     tangerine: "#ff9500",
     "dust-black": "#25282B",
   }),
+  ...aliasColor("primary", "emerald"),
+  ...aliasColor("secondary", "light-blue"),
 };
 
 export default color;
