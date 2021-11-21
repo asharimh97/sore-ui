@@ -3,3 +3,4 @@ public
 dist
 storybook-static
 build-storybook.log
+.parcel-cache
