@@ -72,8 +72,8 @@ const BaseButton = styled(x.button)<ButtonProps>`
   ${({ disabled }) =>
     disabled &&
     css`
-      background-color: gray-100;
-      border-color: gray-400;
+      background-color: gray-200;
+      border-color: gray-300;
       color: gray-400;
       cursor: not-allowed;
       pointer-events: none;
