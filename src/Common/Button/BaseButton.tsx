@@ -12,7 +12,7 @@ export interface ButtonProps<T extends ITheme = Theme>
 
 const buttonProps = compose(systemProps, customButtonProps);
 
-const { x, styled, css } = createCss(buttonProps);
+export const { x, styled, css } = createCss(buttonProps);
 
 const BUTTON_SIZES = {
   small: {
@@ -58,6 +58,14 @@ const BaseButton = styled(x.button)<ButtonProps>`
       border-color: secondary-500;
       background-color: secondary-500;
       color: #fff;
+    `}
+
+  ${({ danger }) =>
+    danger &&
+    css`
+      background-color: watermelon;
+      border-color: watermelon;
+      color: white;
     `}
 
   /* Set button size in base */
