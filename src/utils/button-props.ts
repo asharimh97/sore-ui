@@ -4,15 +4,15 @@ import { style, Theme, ITheme, compose } from "@xstyled/styled-components";
 
 /**
  * Button props
- * block
- * danger
- * disabled
- * ghost
- * loading
- * size = small | medium | large
- * icon = use React icons
- * type = primary (use primary color as bg) | ghost | link | text
- * onClick
+ * block [DONE]
+ * danger [DONE]
+ * disabled [DONE]
+ * ghost [DONE]
+ * loading [HOLD]
+ * size = small | medium | large [DONE]
+ * icon = use React icons [DONE]
+ * type = primary (use primary color as bg) | ghost | link | text [CANCELED]
+ * onClick [DONE?]
  */
 
 interface BlockProps {
@@ -46,7 +46,7 @@ export interface ButtonProps<T extends ITheme = Theme>
   text?: boolean;
   danger?: boolean;
   disabled?: boolean;
-  loading?: boolean;
+  // loading?: boolean;
   htmlType?: string;
 }
 
