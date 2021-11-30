@@ -2,7 +2,7 @@
 import { defaultTheme } from "@xstyled/styled-components";
 import color from "./color";
 
-const fontSizes = {
+export const fontSizes = {
   ...defaultTheme.fontSizes,
   xxs: "9px",
   "extra-small": "11px",
