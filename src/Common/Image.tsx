@@ -68,7 +68,7 @@ const Image: React.FC<ImageProps> = ({
   // If given caption render an image inside a box
   if (caption) {
     return (
-      <Flex alignItems="center" flexDirection="column" w="100%">
+      <Flex alignItems="center" flexDirection="column">
         {renderContent()}
         <Text color="blue-gray-300" italic size="small" mt="16px">
           {caption}
