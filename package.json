@@ -6,6 +6,9 @@
   "source": "src/index.ts",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -14,7 +17,11 @@
     "watch": "parcel watch"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Ashari Muhammad Hisbulloh",
+    "email": "asharimh97@gmail.com",
+    "url": "https://iamashari.space"
+  },
   "license": "MIT",
   "dependencies": {
     "@xstyled/prop-types": "^3.1.0",
