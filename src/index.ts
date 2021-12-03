@@ -1,6 +1,6 @@
 // Global styles and default theme
 export { default as Preflight } from "./_style/GlobalStyle";
-export { default as DefaultTheme } from "./_style/theme";
+export { default as defaultTheme } from "./_style/theme";
 
 // Common components
 export { default as Alert } from "./Common/Alert";

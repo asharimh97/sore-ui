@@ -32,6 +32,7 @@ const theme = {
     ...color,
   },
   fontSizes,
+  fonts,
 };
 
 export default theme;
