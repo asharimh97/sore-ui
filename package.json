@@ -1,11 +1,14 @@
 {
   "name": "sore-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple and lightweight react library for every use",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
+  "targets": {
+    "types": false
+  },
   "files": [
     "dist"
   ],
@@ -16,11 +19,20 @@
     "build": "parcel build",
     "watch": "parcel watch"
   },
-  "keywords": [],
+  "keywords": [
+    "ui",
+    "styled components",
+    "xstyled",
+    "react"
+  ],
   "author": {
     "name": "Ashari Muhammad Hisbulloh",
     "email": "asharimh97@gmail.com",
     "url": "https://iamashari.space"
+  },
+  "homepage": "https://sore-ui.iamashari.space",
+  "repository": {
+    "url": "https://github.com/asharimh97/sore-ui"
   },
   "license": "MIT",
   "dependencies": {
