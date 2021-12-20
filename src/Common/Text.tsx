@@ -12,7 +12,7 @@ interface TextProps<T extends ITheme = Theme>
 
 const textProps = compose<TextProps>(systemProps, customTextProps);
 
-const { x } = createCss(textProps);
+const { x, styled, css } = createCss(textProps);
 
 const Text: React.FC<TextProps> = (props) => {
   return <x.p {...props} />;

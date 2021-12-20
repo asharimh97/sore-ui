@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved
 import * as CSS from "csstype";
 import {
   style,
@@ -86,7 +87,7 @@ interface UppercaseProps {
   uppercase?: boolean;
 }
 const uppercase = style({
-  prop: "upppercase",
+  prop: "uppercase",
   css: () => ({
     "&": {
       textTransform: "uppercase",
