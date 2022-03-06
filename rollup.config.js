@@ -1,4 +1,5 @@
 import dts from "rollup-plugin-dts";
+import typescript from "@rollup/plugin-typescript";
 
 export default [
   {
@@ -9,6 +10,6 @@ export default [
         format: "es",
       },
     ],
-    plugins: [dts({ respectExternal: true })],
+    plugins: [typescript, dts({ respectExternal: true })],
   },
 ];
