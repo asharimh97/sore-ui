@@ -6,6 +6,7 @@ import { Category } from "../hierarchy";
 import { Text, Flex } from "../../src/Common";
 import { fontSizes } from "../../src/_style/theme";
 
+// @ts-ignore
 export const Typography = (props) => (
   <>
     {Object.keys(fontSizes).map((size) => (
