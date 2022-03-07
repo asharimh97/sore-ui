@@ -13,8 +13,9 @@ function Textarea(props: TextareaProps) {
     <Box
       as="textarea"
       w="100%"
+      borderRadius="5px"
       border="solid 1px"
-      borderColor="cool-gray-400"
+      borderColor="cool-gray-300"
       p="8px"
       {...props}
     />
